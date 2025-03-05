@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status - Shop Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans min-h-screen flex items-center justify-center">
+<div class="w-full max-w-[428px] mx-auto bg-white rounded-lg shadow-md">
+    <!-- Header -->
+    <header class="bg-white h-[22px] p-4 flex items-center justify-between">
+        <div class="w-[50px] h-[22px] pl-8 font-inter font-semibold text-[17px] leading-[22px] tracking-[0px] text-center text-black">
+            9:41
+        </div>
+        <div class="flex items-center space-x-2 pr-[30px]">
+            <span class="text-black h-[13px]">
+                <img src="../assets/icons/Battery.png" alt=""/>
+            </span>
+            <span class="text-black h-[13px]">
+                <img src="../assets/icons/Cellular%20Connection.png" alt=""/>
+            </span>
+            <span class="text-black h-[13px]">
+                <img src="../assets/icons/Wifi.png" alt=""/>
+            </span>
+        </div>
+    </header>
+
+    <!-- Shop Info -->
+    <div class="h-12 shadow-[2px_4px_10px_0px_#000D0B0A] relative flex items-center">
+        <img src="../assets/images/logo.png" alt="Shop Logo" class="w-[51px] h-[47px] ml-[12px]">
+        <div class="text-center t absolute left-1/2 -translate-x-1/2">
+            <div class="text-[#303030] font-inter font-semibold text-base leading-[19px] tracking-normal">Shop Name</div>
+            <div class="text-[12px] font-normal leading-[14px] tracking-normal text-[#30303080]">Shop address</div>
+        </div>
+    </div>
+
+    <!-- Order Info -->
+    <div class="m-4 p-4 rounded-[28px] p-4 bg-[#F5F6FA]">
+        <div class="bg-white rounded-[20px] pt-[16px] pr-[75px] pb-[16px] pl-[75px] flex items-center justify-center flex-col gap-4">
+            <div class="text-center">
+                <span class="font-inter font-bold text-[16px] leading-[24px] tracking-normal text-center text-[#575859]">Your order number</span>
+            </div>
+            <h2 class="font-inter font-semibold text-[34px] leading-[40px] tracking-normal text-center text-[#DEA100]">Sushi - #005</h2>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="p-4 space-y-6 max-w-lg mx-auto">
+        <!-- Order received -->
+        <div class="flex items-start gap-4">
+            <div>
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">14:45</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">Nov 20, 2024</p>
+            </div>
+            <div class="relative flex flex-col items-center">
+                <div>
+                    <img src="../assets/icons/Check-Icon.svg" alt=""/>
+                </div>
+                <div class="absolute -bottom-[18px] rounded-[50px] w-[20px] border-[2px] rotate-[-90deg] border-[#DEA100]"></div>
+            </div>
+            <div class="flex-1">
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">Order received</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">We have received your order.</p>
+            </div>
+        </div>
+
+        <!-- All drivers are busy -->
+        <div class="flex items-start space-x-4">
+            <div>
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">14:45</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">Nov 20, 2024</p>
+            </div>
+            <div class="relative flex flex-col items-center">
+                <div class="w-[28px] h-[28px]">
+                    <img src="../assets/icons/Toggle.svg" alt=""/>
+                </div>
+                <div class="absolute -bottom-[26px] rounded-[50px] w-[38px] border-[2px] rotate-[-90deg] border-[#F5222D]"></div>
+            </div>
+            <div class="flex-1">
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">All drivers are currently busy</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">We’re sorry, all our drivers are currently busy. The system could not find a suitable driver at this time.</p>
+            </div>
+        </div>
+
+        <!-- Cancel Order & Refund -->
+        <div class="flex items-start space-x-4">
+            <div>
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">14:50</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">Nov 20, 2024</p>
+            </div>
+            <div class="relative flex flex-col items-center">
+                <div>
+                    <img src="../assets/icons/Check-Icon.svg" alt=""/>
+                </div>
+                <div class="absolute -bottom-[18px] rounded-[50px] w-[20px] border-[2px] rotate-[-90deg] border-[#DEA100]"></div>
+            </div>
+            <div class="flex-1">
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">Cancel Order & Refund</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">The order will be canceled.</p>
+            </div>
+        </div>
+
+        <!-- Refund successful -->
+        <div class="flex items-start space-x-4">
+            <div>
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">14:51</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">Nov 20, 2024</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-[30px] h-[30px]">
+                    <img src="../assets/icons/Frame.png" alt=""/>
+                </div>
+            </div>
+            <div class="flex-1">
+                <p class="font-inter font-semibold text-[14px] leading-[22px] mb-1 tracking-normal text-[#2A2A2B]">Refund successful</p>
+                <p class="font-inter font-normal text-[12px] leading-[20px] tracking-normal text-[#575859]">Your money will be refunded in a couple of minutes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Message -->
+    <div class="rounded-[24px] p-[24px] flex flex-col gap-[12px] mt-[20px] mb-[53px] p-[24px] m-4 bg-[#F5F6FA] text-center">
+        <h3 class="font-inter font-semibold text-[24px] leading-[32px] text-center text-[#2A2A2B]">Sorry, We Couldn't Deliver</h3>
+        <p class="font-inter font-normal text-[16px] leading-[24px] text-center text-[#575859]">We couldn’t find a driver this time. Please try ordering again or choose Takeaway instead. Thank you for understanding!</p>
+        <button class="border-[1px] pt-[12px] pr-[16px] pb-[12px] pl-[16px] bg-[#F7CC5B] text-[#2A2A2B] font-inter font-semibold text-[20px] leading-[28px] text-center rounded-[8px] hover:bg-yellow-600 transition-colors text-base font-medium">Place new order</button>
+    </div>
+</div>
+</body>
+</html>

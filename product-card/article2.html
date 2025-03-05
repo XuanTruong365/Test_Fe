@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Sản Phẩm Độc Lạ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .product-card {
+            position: relative;
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            max-width: 300px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+        }
+        .card-content {
+            position: relative;
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        .product-image {
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover .product-image {
+            transform: translateZ(20px) scale(1.05); /* Ảnh nổi 3D và rung nhẹ */
+            animation: shake 0.5s infinite;
+        }
+        /* Hiệu ứng hạt rơi */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .product-card:hover .particles {
+            opacity: 1;
+        }
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(59, 130, 246, 0.7);
+            border-radius: 50%;
+            animation: fall 1.5s infinite linear;
+        }
+        /* Hiệu ứng cho nút mua */
+        .buy-button {
+            position: relative;
+            background: #3b82f6;
+            color: white;
+            transition: transform 0.3s ease, background 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .buy-button::after {
+            content: "🛒";
+            position: absolute;
+            right: -25px;
+            opacity: 0;
+            font-size: 18px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .product-card:hover .buy-button {
+            transform: scale(1.15);
+            background: #1d4ed8;
+            animation: pulse-border 1s infinite;
+        }
+        .product-card:hover .buy-button::after {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        @keyframes fall {
+            0% { transform: translateY(-20px); opacity: 1; }
+            100% { transform: translateY(400px); opacity: 0; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateZ(20px) scale(1.05) translateX(0); }
+            25% { transform: translateZ(20px) scale(1.05) translateX(2px); }
+            75% { transform: translateZ(20px) scale(1.05) translateX(-2px); }
+        }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+<!-- Card Sản Phẩm -->
+<div class="product-card">
+    <div class="card-content">
+        <!-- Ảnh sản phẩm -->
+        <img src="../assets/images/product.jpeg" alt="product" class="w-[200px] h-[200px] mx-auto rounded-md product-image" />
+
+        <!-- Nội dung -->
+        <h2 class="text-black text-xl font-bold mt-4">Áo thun nam</h2>
+        <p class="text-gray-600 text-base mt-2">Chất liệu cotton, thoải mái</p>
+        <p class="text-red-500 text-lg font-semibold mt-3">250.000 VNĐ</p>
+
+        <!-- Nút mua hàng -->
+        <button class="mt-4 font-semibold px-5 py-2 rounded-lg buy-button">
+            Mua ngay
+        </button>
+    </div>
+
+    <!-- Hiệu ứng hạt -->
+    <div class="particles">
+        <span class="particle" style="left: 20%; animation-delay: 0s;"></span>
+        <span class="particle" style="left: 40%; animation-delay: 0.3s;"></span>
+        <span class="particle" style="left: 60%; animation-delay: 0.6s;"></span>
+        <span class="particle" style="left: 80%; animation-delay: 0.9s;"></span>
+    </div>
+</div>
+
+</body>
+</html>

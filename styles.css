@@ -1,0 +1,9 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-semibold-inter {
+    @apply font-inter font-semibold tracking-normal;
+}
+
